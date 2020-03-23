@@ -1,0 +1,796 @@
+Script started on Вс 22 мар 2020 20:10:52
+]0;root@localhost:~[?1034h[root@localhost ~]# vgs
+  VG     #PV #LV #SN Attr   VSize  VFree
+  centos   1   2   0 wz--n- <7,00g    0 
+]0;root@localhost:~[root@localhost ~]# мпкутфьу[K[K[K[K[K[K[K[Kvgrename V[Kcentos OtusRoot
+  Volume group "centos" successfully renamed to "OtusRoot"
+]0;root@localhost:~[root@localhost ~]# мш .у[K[K[K[K[Kvi /etc/fstab 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"/etc/fstab" 11L, 465C[2;1H#
+# /etc/fstab
+# Created by anaconda on Sun Mar 22 19:52:06 2020
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /[23Cxfs     defaults[8C0 0
+UUID=14569991-5b05-433e-901f-be9715a7a979 /boot[19Cxfs     defaull[11;1Hts[8C0 0
+/dev/mapper/centos-swap swap[20Cswap    defaults[8C0 0
+[94m~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+
+
+
+
+[m/dev/mapper/centos[?25l[24;1H[1m-- INSERT --[m[24;14H[K[9;17H[?12l[?25hos[?25l-root / [22Cxfs     defaults [7C0 0[9;75H[K[9;18H[?12l[?25h[?25l-root / [22Cxfs     defaults [7C0 0[9;74H[K[9;17H[?12l[?25h[?25l-root / [22Cxfs     defaults [7C0 0[9;73H[K[9;16H[?12l[?25h[?25l-root / [22Cxfs     defaults [7C0 0[9;72H[K[9;15H[?12l[?25h[?25l-root / [22Cxfs     defaults [7C0 0[9;71H[K[9;14H[?12l[?25h[?25l-root / [22Cxfs     defaults [7C0 0[9;70H[K[9;13H[?12l[?25h[?25lO-root /[22C xfs     defaults[7C 0 0[9;14H[?12l[?25h[?25lt-root /[22C xfs     defaults[7C 0 0[9;15H[?12l[?25h[?25lu-root /[22C xfs     defaults[7C 0 0[9;16H[?12l[?25h[?25ls-root /[22C xfs     defaults[7C 0 0[9;17H[?12l[?25h[?25lR-root /[22C xfs     defaults[7C 0 0[9;18H[?12l[?25h[?25lo-root /[22C xfs     defaults[7C 0 0[9;19H[?12l[?25h[?25lo-root /[22C xfs     defaults[7C 0 0[9;20H[?12l[?25h[?25lt-root /[22C xfs     defaults[7C 0 0[9;21H[?12l[?25h[10;21H[12;21H-[?25l-swap swap [19Cswap    defaults [7C0 0[12;75H[K[12;18H[?12l[?25h[?25l-swap swap [19Cswap    defaults [7C0 0[12;74H[K[12;17H[?12l[?25h[?25l-swap swap [19Cswap    defaults [7C0 0[12;73H[K[12;16H[?12l[?25h[?25l-swap swap [19Cswap    defaults [7C0 0[12;72H[K[12;15H[?12l[?25h[?25l-swap swap [19Cswap    defaults [7C0 0[12;71H[K[12;14H[?12l[?25h[?25l-swap swap [19Cswap    defaults [7C0 0[12;70H[K[12;13H[?12l[?25h[?25lO-swap swap[19C swap    defaults[7C 0 0[12;14H[?12l[?25h[?25lt-swap swap[19C swap    defaults[7C 0 0[12;15H[?12l[?25h[?25lu-swap swap[19C swap    defaults[7C 0 0[12;16H[?12l[?25h[?25ls-swap swap[19C swap    defaults[7C 0 0[12;17H[?12l[?25h[?25lR-swap swap[19C swap    defaults[7C 0 0[12;18H[?12l[?25h[?25lo-swap swap[19C swap    defaults[7C 0 0[12;19H[?12l[?25h[?25lo-swap swap[19C swap    defaults[7C 0 0[12;20H[?12l[?25h[?25lt-swap swap[19C swap    defaults[7C 0 0[12;21H[?12l[?25h[24;1H[K[12;20H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hWq[?25l[24;3H[K[24;3H[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25hwq[?25l"/etc/fstab" 11L, 469C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:~[root@localhost ~]# vi /etc/default/grub r[K
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"/etc/default/grub" 7L, 279C[1;1HGRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swapp[7;1H rhgb quiet"
+GRUB_DISABLE_RECOVERY="true"
+[94m~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h
+
+
+
+
+
+
+[6;1H[5;1H[mG
+GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centosto[?25l[24;1H[1m-- INSERT --[m[24;13H[K[6;53H[?12l[?25hs[?25l/root rd.lvm.lv=centos/swap  [7;1Hrhgb quiet"[7;12H[K[6;53H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rr[7;1Hhgb quiet"[7;11H[K[6;52H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhh[7;1Hgb quiet"[7;10H[K[6;51H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgg[7;1Hb quiet"[7;9H[K[6;50H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgbb[7;1H quiet"[7;8H[K[6;49H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb  [7;1Hquiet"[7;7H[K[6;48H[?12l[?25h[?25lO/root rd.lvm.lv=centos/swap rhgbb[7;1H quiet"[6;49H[?12l[?25h[?25lt/root rd.lvm.lv=centos/swap rhgg[7;1Hb quiet"[6;50H[?12l[?25h[?25lu/root rd.lvm.lv=centos/swap rhh[7;1Hgb quiet"[6;51H[?12l[?25h[?25ls/root rd.lvm.lv=centos/swap rr[7;1Hhgb quiet"[6;52H[?12l[?25h[?25lR/root rd.lvm.lv=centos/swap  [7;1Hrhgb quiet"[6;53H[?12l[?25h[?25lO/root rd.lvm.lv=centos/swapp[7;1H rhgb quiet"[6;54H[?12l[?25h[?25lt/root rd.lvm.lv=centos/swaa[7;1Hp rhgb quiet"[6;55H[?12l[?25h/roo[?25lt/root rd.lvm.lv=centos/swapp[7;1H rhgb quiet"[7;13H[K[6;53H[?12l[?25h[?25lot/root rd.lvm.lv=centos/swaa[7;1Hp rhgb quiet"[6;54H[?12l[?25h[?25lot/root rd.lvm.lv=centos/sww[7;1Hap rhgb quiet"[6;55H[?12l[?25ht/root rd.lvm.lv=centos[?25l/swaa[7;1Hp rhgb quiet"[7;14H[K[6;77H[?12l[?25h[?25l/swapp[7;1H rhgb quiet"[7;13H[K[6;76H[?12l[?25h[?25l/swap  [7;1Hrhgb quiet"[7;12H[K[6;75H[?12l[?25h[?25l/swap rr[7;1Hhgb quiet"[7;11H[K[6;74H[?12l[?25h[?25l/swap rhh[7;1Hgb quiet"[7;10H[K[6;73H[?12l[?25h[?25l/swap rhgg[7;1Hb quiet"[7;9H[K[6;72H[?12l[?25h[?25lO/swap rhh[7;1Hgb quiet"[6;73H[?12l[?25h[?25lr/swap rr[7;1Hhgb quiet"[6;74H[?12l[?25h[?25l/swap rhh[7;1Hgb quiet"[7;10H[K[6;73H[?12l[?25h[?25lt/swap rr[7;1Hhgb quiet"[6;74H[?12l[?25h[?25li/swap  [7;1Hrhgb quiet"[6;75H[?12l[?25h[?25l/swap rr[7;1Hhgb quiet"[7;11H[K[6;74H[?12l[?25h[?25lu/swap  [7;1Hrhgb quiet"[6;75H[?12l[?25h[?25ls/swapp[7;1H rhgb quiet"[6;76H[?12l[?25h[?25lR/swaa[7;1Hp rhgb quiet"[6;77H[?12l[?25h[?25lo/sww[7;1Hap rhgb quiet"[6;78H[?12l[?25h[?25lo/ss[7;1Hwap rhgb quiet"[6;79H[?12l[?25h[?25lt//[7;1Hswap rhgb quiet"[6;80H[?12l[?25h[24;1H[K[6;79H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hWq[?25l[24;3H[K[24;3H[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25hwq[?25l"/etc/default/grub" 7L, 283C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:~[root@localhost ~]# vi /etc/[K[K[K[K[K/bbo[K[Koot/grub
+grub/  grub2/ 
+[root@localhost ~]# vi /boot/grub
+grub/  grub2/ 
+[root@localhost ~]# vi /boot/grub/g[K[K2/grub
+grub.cfg  grubenv   
+[root@localhost ~]# vi /boot/grub2/grub/.[K[K.cfg 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"/boot/grub2/grub.cfg" 141L, 4307C[1;1H#
+# DO NOT EDIT THIS FILE
+#
+# It is automatically generated by grub2-mkconfig using templates
+# from /etc/grub.d and settings from /etc/default/grub
+#
+
+### BEGIN /etc/grub.d/00_header ###
+set pager=1
+
+if [ -s $prefix/grubenv ]; then
+  load_env
+fi
+if [ "${next_entry}" ] ; then
+   set default="${next_entry}"
+   set next_entry=
+   save_env next_entry
+   set boot_once=true
+else
+   set default="${saved_entry}"
+fi
+
+if [ x"${feature_menuentry_id}" = xy ]; then[1;1H[?12l[?25h[?25l[24;1H[K[24;1H/[?12l[?25hcentos[?25l[27m[m[H[2J[1;3Hsource ${prefix}/user.cfg
+  if [ -n "${GRUB2_PASSWORD}" ]; then
+    set superusers="root"
+    export superusers
+    password_pbkdf2 root ${GRUB2_PASSWORD}
+  fi
+fi
+### END /etc/grub.d/01_users ###
+
+### BEGIN /etc/grub.d/10_linux ###
+menuentry 'CentOS Linux (3.10.0-957.12.2.el7.x86_64) 7 (Core)' --class centos ---[12;1Hclass gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnull[13;1Hinux-3.10.0-957.12.2.el7.x86_64-advanced-f5c27f0d-883c-4ecf-97da-199451e472ed' {[14;9Hload_video[15;9Hset gfxpayload=keep[16;9Hinsmod gzio[17;9Hinsmod part_msdos[18;9Hinsmod xfs[19;9Hset root='hd0,msdos1'[20;9Hif [ x$feature_platform_search_hint = xy ]; then[21;11Hsearch --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos1 --hint--[22;1Hefi=hd0,msdos1 --hint-baremetal=ahci0,msdos1 --hint='hd0,msdos1'  14569991-5b05--[23;1H433e-901f-be9715a7a979[11;72H[?12l[?25h[14;18H[15;27H[16;19H[17;25H[18;18H[19;29H[20;56H[21;72H[?25l[1;23r[23;1H
+[1;24r[23;9Helse[?12l[?25h[?25l
+/[?12l[?25h/dev/mapper[?25l/centos[24;8H[K[24;1H[1;23r[1;1H[6M[1;24r[18;11Hsearch --no-floppy --fs-uuid --set=root 14569991-5b05-433e-901f-be97155[19;1Ha7a979[20;9Hfi[21;9Hlinux16 /vmlinuz-3.10.0-957.12.2.el7.x86_64 root=/dev/mapper/centos-roott[22;1H ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[24;1H[K[21;70H[?12l[?25hcentos[?25l
+
+
+[1m-- INSERT --[21;74H[?12l[?25h[mo[?25ls-root  [22;1Hro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[23;12H[K[21;74H[?12l[?25h[?25ls-root rr[22;1Ho crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ee[23;1Hn_US.UTF-8[23;11H[K[21;73H[?12l[?25hs[?25l-root roo[22;1H crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=enn[23;1H_US.UTF-8[23;10H[K[21;73H[?12l[?25h[?25l-root ro  [22;1Hcrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=en__[23;1HUS.UTF-8[23;9H[K[21;72H[?12l[?25h[?25l-root ro cc[22;1Hrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=en_UU[23;1HS.UTF-8[23;8H[K[21;71H[?12l[?25h[?25l-root ro crr[22;1Hashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=en_USS[23;1H.UTF-8[23;7H[K[21;70H[?12l[?25h[?25lO-root ro cc[22;1Hrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=en_UU[23;1HS.UTF-8[21;71H[?12l[?25h[?25lt-root ro  [22;1Hcrashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=en__[23;1HUS.UTF-8[21;72H[?12l[?25h[?25lu-root roo[22;1H crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=enn[23;1H_US.UTF-8[21;73H[?12l[?25h[?25ls-root rr[22;1Ho crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG=ee[23;1Hn_US.UTF-8[21;74H[?12l[?25h[?25lR-root  [22;1Hro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[21;75H[?12l[?25h[?25lo-roott[22;1H ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[21;76H[?12l[?25h[?25lo-rooo[22;1Ht ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[21;77H[?12l[?25h[?25lt-roo[22;1Hot ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[21;78H[?12l[?25h-r
+ot ro crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=ce[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[23;14H[K[22;39H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[23;13H[K[22;38H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[23;12H[K[22;37H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANG=ee[23;1Hn_US.UTF-8[23;11H[K[22;36H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANG=enn[23;1H_US.UTF-8[23;10H[K[22;35H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANG=en__[23;1HUS.UTF-8[23;9H[K[22;34H[?12l[?25h[?25lO/root rd.lvm.lv=centos/swap rhgb quiet LANG=enn[23;1H_US.UTF-8[22;35H[?12l[?25h[?25lt/root rd.lvm.lv=centos/swap rhgb quiet LANG=ee[23;1Hn_US.UTF-8[22;36H[?12l[?25h[?25lu/root rd.lvm.lv=centos/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[22;37H[?12l[?25h[?25ls/root rd.lvm.lv=centos/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[22;38H[?12l[?25h[?25lR/root rd.lvm.lv=centos/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[22;39H[?12l[?25h[?25le/root rd.lvm.lv=centos/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[22;40H[?12l[?25h[?25la/root rd.lvm.lv=centos/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[22;41H[?12l[?25h[?25ld/root rd.lvm.lv=centos/swap rhgb quiet  [23;1HLANG=en_US.UTF-8[22;42H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[23;16H[K[22;41H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[23;15H[K[22;40H[?12l[?25h[?25l/root rd.lvm.lv=centos/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[23;14H[K[22;39H[?12l[?25h[?25lo/root rd.lvm.lv=centos/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[22;40H[?12l[?25h[?25lo/root rd.lvm.lv=centos/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[22;41H[?12l[?25h[?25lt/root rd.lvm.lv=centos/swap rhgb quiet  [23;1HLANG=en_US.UTF-8[22;42H[?12l[?25h/root rd.lvm.lv=centos[?25l/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[23;16H[K[22;63H[?12l[?25h[?25l/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[23;15H[K[22;62H[?12l[?25h[?25l/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[23;14H[K[22;61H[?12l[?25h[?25l/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[23;13H[K[22;60H[?12l[?25h[?25l/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[23;12H[K[22;59H[?12l[?25h[?25l/swap rhgb quiet LANG=ee[23;1Hn_US.UTF-8[23;11H[K[22;58H[?12l[?25h[?25lO/swap rhgb quiet LANG==[23;1Hen_US.UTF-8[22;59H[?12l[?25h[?25lt/swap rhgb quiet LANGG[23;1H=en_US.UTF-8[22;60H[?12l[?25h[?25lu/swap rhgb quiet LANN[23;1HG=en_US.UTF-8[22;61H[?12l[?25h[?25ls/swap rhgb quiet LAA[23;1HNG=en_US.UTF-8[22;62H[?12l[?25h[?25lR/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[22;63H[?12l[?25h[?25lO/swap rhgb quiet  [23;1HLANG=en_US.UTF-8[22;64H[?12l[?25h[?25lo/swap rhgb quiett[23;1H LANG=en_US.UTF-8[22;65H[?12l[?25h[?25lt/swap rhgb quiee[23;1Ht LANG=en_US.UTF-8[22;66H[?12l[?25h[?25l/swap rhgb quiett[23;1H LANG=en_US.UTF-8[23;18H[K[22;65H[?12l[?25h[?25l/swap rhgb quiet  [23;1HLANG=en_US.UTF-8[23;17H[K[22;64H[?12l[?25h[?25l/swap rhgb quiet LL[23;1HANG=en_US.UTF-8[23;16H[K[22;63H[?12l[?25h[?25lo/swap rhgb quiet  [23;1HLANG=en_US.UTF-8[22;64H[?12l[?25h[?25lo/swap rhgb quiett[23;1H LANG=en_US.UTF-8[22;65H[?12l[?25h[?25lt/swap rhgb quiee[23;1Ht LANG=en_US.UTF-8[22;66H[?12l[?25h[24;1H[K[22;65H[?25l[?12l[?25h[?25l
+
+:[?12l[?25hwq[?25l"/boot/grub2/grub.cfg" 141L, 4313C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:~[root@localhost ~]# ьл[K[Kmkinitrd -f -v /bopot/[K[K[K[Kot/initramfs-$(uname-[K -r).img $(uname -r)
+Executing: /usr/sbin/dracut -f -v /boot/initramfs-3.10.0-957.12.2.el7.x86_64.img 3.10.0-957.12.2.el7.x86_64
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: cavScript started on Вс 22 мар 2020 20:29:49
+]0;root@localhost:~[?1034h[root@localhost ~]# vgs
+  VG       #PV #LV #SN Attr   VSize  VFree
+  OtusRoot   1   2   0 wz--n- <7,00g    0 
+]0;root@localhost:~[root@localhost ~]# 
+]0;root@localhost:~[root@localhost ~]# св .[K[K[K[Kcd .[K/use[Kr/lib/n[Kmod[K[K[Kdracut/modules.d/
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ;[Kls
+[0m[38;5;27m00bash[0m               [38;5;27m90dmsquash-live-ntfs[0m  [38;5;27m95rootfs-block[0m
+[38;5;27m00systemd-bootchart[0m  [38;5;27m90kernel-modules[0m      [38;5;27m95ssh-client[0m
+[38;5;27m03modsign[0m            [38;5;27m90livenet[0m             [38;5;27m95terminfo[0m
+[38;5;27m03rescue[0m             [38;5;27m90lvm[0m                 [38;5;27m95udev-rules[0m
+[38;5;27m04watchdog[0m           [38;5;27m90mdraid[0m              [38;5;27m95virtfs[0m
+[38;5;27m05busybox[0m            [38;5;27m90multipath[0m           [38;5;27m95zfcp[0m
+[38;5;27m05nss-softokn[0m        [38;5;27m90qemu[0m                [38;5;27m95znet[0m
+[38;5;27m10i18n[0m               [38;5;27m90qemu-net[0m            [38;5;27m97biosdevname[0m
+[38;5;27m30convertfs[0m          [38;5;27m91crypt-gpg[0m           [38;5;27m98ecryptfs[0m
+[38;5;27m40network[0m            [38;5;27m91crypt-loop[0m          [38;5;27m98pollcdrom[0m
+[38;5;27m45ifcfg[0m              [38;5;27m95cifs[0m                [38;5;27m98selinux[0m
+[38;5;27m45url-lib[0m            [38;5;27m95dasd[0m                [38;5;27m98syslog[0m
+[38;5;27m50drm[0m                [38;5;27m95dasd_mod[0m            [38;5;27m98systemd[0m
+[38;5;27m50plymouth[0m           [38;5;27m95debug[0m               [38;5;27m98usrmount[0m
+[38;5;27m80cms[0m                [38;5;27m95fcoe[0m                [38;5;27m99base[0m
+[38;5;27m90bcache[0m             [38;5;27m95fcoe-uefi[0m           [38;5;27m99fs-lib[0m
+[38;5;27m90btrfs[0m              [38;5;27m95fstab-sys[0m           [38;5;27m99img-lib[0m
+[38;5;27m90crypt[0m              [38;5;27m95iscsi[0m               [38;5;27m99kdumpbase[0m
+[38;5;27m90dm[0m                 [38;5;27m95nbd[0m                 [38;5;27m99microcode_ctl-fw_dir_override[0m
+[38;5;27m90dmraid[0m             [38;5;27m95nfs[0m                 [38;5;27m99shutdown[0m
+[38;5;27m90dmsquash-live[0m      [38;5;27m95resume[0m              [38;5;27m99uefi-lib[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# мш [K[K[Kmksir[K[K[Kdir 01test
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# cd 01test/
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# vi [K[K[Kvi /etc/[K[K[K[K[K[K[K[Kexho [K[K[K[K[Kecho >>[K[K[K[K[K[K[Ki[Kvi mode[Kule_setup.sh
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"module_setup.sh" [New File][2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[97m[41mE348: No string under cursor[1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H/bin/bash[24;5H[K[24;1H[31msearch hit BOTTOM, continuing at TOP[m[97m[41mE486: Pattern not found: bin[m[24;29H[K[1;1H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;13H[K[1;1Heck() {
+    return 0[2;13H[K[3;1H}[3;2H[K[4;1H[K[5;1Hdepends() {[5;12H[K[6;1H    return 0[6;13H[K[7;1H}[7;2H[K[8;1H[K[9;1Hinstall() {[9;12H[K[10;1H    inst_hook cleanup 00 "${moddir}/test.sh"[10;45H[K[11;1H}[11;2H[K[11;2H[?12l[?25h[10;1H[9;1H[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H[?25l[2;23r[2;1H[L[1;24r[1;1H[K[2;1Heck() {[?12l[?25h[?25l[3;23r[3;1H[L[1;24r[2;1H[K[3;1Heck() {[?12l[?25h[2;1H[1;1H[?25l#[?12l[?25h[?25l![?12l[?25h[?25l.[?12l[?25h[?25lb[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l/[?12l[?25h[?25l[1;7H[K[1;7H[?12l[?25h[?25l[1;6H[K[1;6H[?12l[?25h[?25l[1;5H[K[1;5H[?12l[?25h[?25l[1;4H[K[1;4H[?12l[?25h[?25l[1;3H[K[1;3H[?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h
+[3;8H[?25lceck() {c[?12l[?25h[?25lheck() {ch[?12l[?25hec
+    
+}
+
+depe
+
+
+
+
+[24;1H[K[12;1H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hWq[?25l[24;3H[K[24;3H[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25hwq[?25l"module_setup.sh" [New] 13L, 126C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# vi module_setup.sh[K=[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kte[Kt[Kest[K[Kst.sh
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"test.sh" [New File][2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[97m[41mE348: No string under cursor[1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H/bin/bash[24;5H[K[24;1H[31msearch hit BOTTOM, continuing at TOP[m[97m[41mE486: Pattern not found: bin[m[24;29H[K[1;1H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;13H[K[1;1H0<>/dev/console 1<>/dev/console 2<>/dev/console
+cat <<'msgend'[2;15H[K[3;1HHello! You are in dracut module![3;33H[K[4;1H ___________________[4;21H[K[5;1H< I'm dracut module >[5;22H[K[6;1H -------------------[6;21H[K[7;1H   \[7;5H[K[8;1H    \[8;6H[K[9;1H        .--.[9;13H[K[10;1H       |o_o |[10;14H[K[11;1H       |:_/ |[11;14H[K[12;1H      //   \ \[12;15H[K[13;1H     (|otus | )[13;16H[K[14;1H    /'\_   _/`\[14;16H[K[15;1H    \___)=(___/[15;16H[K[16;1Hmsgend[16;7H[K[17;1Hsleep 10[17;9H[K[18;1Hecho " continuing...."[18;23H[K[18;23H[?12l[?25h[17;9H[16;7H[15;16H[14;16H[13;16H[12;15H[11;14H[10;14H[9;13H[8;6H[7;5H[6;21H[5;22H[4;21H[3;23H[2;15H[1;23H[?25l[2;23r[2;1H[L[1;24r[1;1H[K[2;1H0<>/dev/console 1<>/dev/console 2<>/dev/console[?12l[?25h[?25l[3;23r[3;1H[L[1;24r[2;1H[K[3;1H0<>/dev/console 1<>/dev/console 2<>/dev/console[?12l[?25h[2;1H[1;1H[?25l#[?12l[?25h[?25l![?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h
+[3;12H[?25le0<>/dev/console 1<>/dev/console 2<>/dev/consolee[?12l[?25h[?25lx0<>/dev/console 1<>/dev/console 2<>/dev/consoleex[?12l[?25h[?25le0<>/dev/console 1<>/dev/console 2<>/dev/consoleexe[?12l[?25h[?25lc0<>/dev/console 1<>/dev/console 2<>/dev/consoleexec[?12l[?25h[?25l 0<>/dev/console 1<>/dev/console 2<>/dev/consoleexec [?12l[?25h[24;1H[K[3;5H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hWq[?25l[24;3H[K[24;3H[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25hwq[?25l"test.sh" [New] 20L, 332C written
+[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mkii[Knitrd[Kd -f[K[K[K[K[K[K[K[K[K[K[Kdrc[Ksc[K[Kacut -f- [K[K -v
+Executing: /usr/sbin/dracut -f -v
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.12.2.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.12.2.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating microcode section ***
+*** Created microcode section ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-957.12.2.el7.x86_64.img' done ***
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# lsinitrd -m /bbot/[K[K[K[Koot/initramfs=$[K[K-$(unm[Kame -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kt
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# lsinitrd -m /boot/initramfs-$(uname -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K
+Image: /boot/initramfs-3.10.0-957.12.2.el7.x86_64.img: 21M
+========================================================================
+Early CPIO image
+========================================================================
+drwxr-xr-x   3 root     root            0 Mar 22 20:44 .
+-rw-r--r--   1 root     root            2 Mar 22 20:44 early_cpio
+drwxr-xr-x   3 root     root            0 Mar 22 20:44 kernel
+drwxr-xr-x   3 root     root            0 Mar 22 20:44 kernel/x86
+drwxr-xr-x   2 root     root            0 Mar 22 20:44 kernel/x86/microcode
+-rw-r--r--   1 root     root       197632 Mar 22 20:44 kernel/x86/microcode/GenuineIntel.bin
+========================================================================
+Version: dracut-033-554.el7
+
+dracut modules:
+bash
+nss-softokn
+i18n
+network
+ifcfg
+drm
+plymouth
+dm
+kernel-modules
+lvm
+qemu
+resume
+rootfs-block
+terminfo
+udev-rules
+biosdevname
+systemd
+usrmount
+base
+fs-lib
+microcode_ctl-fw_dir_override
+shutdown
+========================================================================
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# lsinitrd -m /boot/initramfs-$(uname -r).img [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname  -r)
+Executing: /usr/sbin/dracut -f -v /boot/initramfs-3.10.0-957.12.2.el7.x86_64.img 3.10.0-957.12.2.el7.x86_64
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.12.2.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.12.2.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating microcode section ***
+*** Created microcode section ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-957.12.2.el7.x86_64.img' done ***
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
+module_setup.sh  test.sh
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# cd ..
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ls
+[0m[38;5;27m00bash[0m               [38;5;27m90dmsquash-live-ntfs[0m  [38;5;27m95ssh-client[0m
+[38;5;27m00systemd-bootchart[0m  [38;5;27m90kernel-modules[0m      [38;5;27m95terminfo[0m
+[38;5;27m01test[0m               [38;5;27m90livenet[0m             [38;5;27m95udev-rules[0m
+[38;5;27m03modsign[0m            [38;5;27m90lvm[0m                 [38;5;27m95virtfs[0m
+[38;5;27m03rescue[0m             [38;5;27m90mdraid[0m              [38;5;27m95zfcp[0m
+[38;5;27m04watchdog[0m           [38;5;27m90multipath[0m           [38;5;27m95znet[0m
+[38;5;27m05busybox[0m            [38;5;27m90qemu[0m                [38;5;27m97biosdevname[0m
+[38;5;27m05nss-softokn[0m        [38;5;27m90qemu-net[0m            [38;5;27m98ecryptfs[0m
+[38;5;27m10i18n[0m               [38;5;27m91crypt-gpg[0m           [38;5;27m98pollcdrom[0m
+[38;5;27m30convertfs[0m          [38;5;27m91crypt-loop[0m          [38;5;27m98selinux[0m
+[38;5;27m40network[0m            [38;5;27m95cifs[0m                [38;5;27m98syslog[0m
+[38;5;27m45ifcfg[0m              [38;5;27m95dasd[0m                [38;5;27m98systemd[0m
+[38;5;27m45url-lib[0m            [38;5;27m95dasd_mod[0m            [38;5;27m98usrmount[0m
+[38;5;27m50drm[0m                [38;5;27m95debug[0m               [38;5;27m99base[0m
+[38;5;27m50plymouth[0m           [38;5;27m95fcoe[0m                [38;5;27m99fs-lib[0m
+[38;5;27m80cms[0m                [38;5;27m95fcoe-uefi[0m           [38;5;27m99img-lib[0m
+[38;5;27m90bcache[0m             [38;5;27m95fstab-sys[0m           [38;5;27m99kdumpbase[0m
+[38;5;27m90btrfs[0m              [38;5;27m95iscsi[0m               [38;5;27m99microcode_ctl-fw_dir_override[0m
+[38;5;27m90crypt[0m              [38;5;27m95nbd[0m                 [38;5;27m99shutdown[0m
+[38;5;27m90dm[0m                 [38;5;27m95nfs[0m                 [38;5;27m99uefi-lib[0m
+[38;5;27m90dmraid[0m             [38;5;27m95resume[0m
+[38;5;27m90dmsquash-live[0m      [38;5;27m95rootfs-block[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# cd 00bash/
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# ls
+[0m[38;5;34mmodule-setup.sh[0m
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# ls -la
+total 8
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [0m[38;5;27m.[0m
+drwxr-xr-x. 66 root root 4096 мар 22 20:37 [38;5;27m..[0m
+-rwxr-xr-x.  1 root root  414 ноя  2  2018 [38;5;34mmodule-setup.sh[0m
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# cd [K[K[Kls -la[Kcd 00bash/ls[Kcd ..[3Pls mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname  -r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Plsinitrd -m /boot/initramfs-$(uname -r).img 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Image: /boot/initramfs-3.10.0-957.12.2.el7.x86_64.img: 21M
+========================================================================
+Early CPIO image
+========================================================================
+drwxr-xr-x   3 root     root            0 Mar 22 20:46 .
+-rw-r--r--   1 root     root            2 Mar 22 20:46 early_cpio
+drwxr-xr-x   3 root     root            0 Mar 22 20:46 kernel
+drwxr-xr-x   3 root     root            0 Mar 22 20:46 kernel/x86
+drwxr-xr-x   2 root     root            0 Mar 22 20:46 kernel/x86/microcode
+-rw-r--r--   1 root     root       197632 Mar 22 20:46 kernel/x86/microcode/GenuineIntel.bin
+========================================================================
+Version: dracut-033-554.el7
+
+dracut modules:
+bash
+nss-softokn
+i18n
+network
+ifcfg
+drm
+plymouth
+dm
+kernel-modules
+lvm
+qemu
+resume
+rootfs-block
+terminfo
+udev-rules
+biosdevname
+systemd
+usrmount
+base
+fs-lib
+microcode_ctl-fw_dir_override
+shutdown
+========================================================================
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# lsinitrd -m /boot/initramfs-$(uname -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kt
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# ;s
+bash: syntax error near unexpected token `;'
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# ls
+[0m[38;5;34mmodule-setup.sh[0m
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# ls =[K-la
+total 8
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [0m[38;5;27m.[0m
+drwxr-xr-x. 66 root root 4096 мар 22 20:37 [38;5;27m..[0m
+-rwxr-xr-x.  1 root root  414 ноя  2  2018 [38;5;34mmodule-setup.sh[0m
+]0;root@localhost:/usr/lib/dracut/modules.d/00bash[root@localhost 00bash]# cd ..
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ls
+[0m[38;5;27m00bash[0m               [38;5;27m90dmsquash-live-ntfs[0m  [38;5;27m95ssh-client[0m
+[38;5;27m00systemd-bootchart[0m  [38;5;27m90kernel-modules[0m      [38;5;27m95terminfo[0m
+[38;5;27m01test[0m               [38;5;27m90livenet[0m             [38;5;27m95udev-rules[0m
+[38;5;27m03modsign[0m            [38;5;27m90lvm[0m                 [38;5;27m95virtfs[0m
+[38;5;27m03rescue[0m             [38;5;27m90mdraid[0m              [38;5;27m95zfcp[0m
+[38;5;27m04watchdog[0m           [38;5;27m90multipath[0m           [38;5;27m95znet[0m
+[38;5;27m05busybox[0m            [38;5;27m90qemu[0m                [38;5;27m97biosdevname[0m
+[38;5;27m05nss-softokn[0m        [38;5;27m90qemu-net[0m            [38;5;27m98ecryptfs[0m
+[38;5;27m10i18n[0m               [38;5;27m91crypt-gpg[0m           [38;5;27m98pollcdrom[0m
+[38;5;27m30convertfs[0m          [38;5;27m91crypt-loop[0m          [38;5;27m98selinux[0m
+[38;5;27m40network[0m            [38;5;27m95cifs[0m                [38;5;27m98syslog[0m
+[38;5;27m45ifcfg[0m              [38;5;27m95dasd[0m                [38;5;27m98systemd[0m
+[38;5;27m45url-lib[0m            [38;5;27m95dasd_mod[0m            [38;5;27m98usrmount[0m
+[38;5;27m50drm[0m                [38;5;27m95debug[0m               [38;5;27m99base[0m
+[38;5;27m50plymouth[0m           [38;5;27m95fcoe[0m                [38;5;27m99fs-lib[0m
+[38;5;27m80cms[0m                [38;5;27m95fcoe-uefi[0m           [38;5;27m99img-lib[0m
+[38;5;27m90bcache[0m             [38;5;27m95fstab-sys[0m           [38;5;27m99kdumpbase[0m
+[38;5;27m90btrfs[0m              [38;5;27m95iscsi[0m               [38;5;27m99microcode_ctl-fw_dir_override[0m
+[38;5;27m90crypt[0m              [38;5;27m95nbd[0m                 [38;5;27m99shutdown[0m
+[38;5;27m90dm[0m                 [38;5;27m95nfs[0m                 [38;5;27m99uefi-lib[0m
+[38;5;27m90dmraid[0m             [38;5;27m95resume[0m
+[38;5;27m90dmsquash-live[0m      [38;5;27m95rootfs-block[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# cd 01test/
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ;[Kla
+bash: la: command not found
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls [K[K[Kls
+module_setup.sh  test.sh
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls -la
+total 12
+drwxr-xr-x.  2 root root   44 мар 22 20:41 [0m[38;5;27m.[0m
+drwxr-xr-x. 66 root root 4096 мар 22 20:37 [38;5;27m..[0m
+-rw-r--r--.  1 root root  126 мар 22 20:40 module_setup.sh
+-rw-r--r--.  1 root root  332 мар 22 20:41 test.sh
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# chmod 755 module_setup.sh 
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# chmod 755 module_setup.sh [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktest.sh 
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# chmod 755 test.sh [8@module_setup[C[C[C[Cls -la[K[Kacd 01test/ls[Kcd ..ls -la[K;slsinitrd -m /boot/initramfs-$(uname -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -la[K[Kcd 00bash/ls[K -la
+total 12
+drwxr-xr-x.  2 root root   44 мар 22 20:41 [0m[38;5;27m.[0m
+drwxr-xr-x. 66 root root 4096 мар 22 20:37 [38;5;27m..[0m
+-rwxr-xr-x.  1 root root  126 мар 22 20:40 [38;5;34mmodule_setup.sh[0m
+-rwxr-xr-x.  1 root root  332 мар 22 20:41 [38;5;34mtest.sh[0m
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls -lachmod 755 test.sh [8@module_setup[C[C[C[Cls -la[K[Kacd 01test/ls[Kcd ..ls -la[K;slsinitrd -m /boot/initramfs-$(uname -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -la[K[Kcd 00bash/ls[Kcd ..[3Pls mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname  -r)
+Executing: /usr/sbin/dracut -f -v /boot/initramfs-3.10.0-957.12.2.el7.x86_64.img 3.10.0-957.12.2.el7.x86_64
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.12.2.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.12.2.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating microcode section ***
+*** Created microcode section ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-957.12.2.el7.x86_64.img' done ***
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname  -r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cchmod 755 test.sh [8@module_setup[C[C[C[Cls -la[K[Kacd 01test/ls[Kcd ..ls -la[K;slsinitrd -m /boot/initramfs-$(uname -r).img | grep test [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kt
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# cd ..
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ls
+[0m[38;5;27m00bash[0m               [38;5;27m90dmsquash-live-ntfs[0m  [38;5;27m95ssh-client[0m
+[38;5;27m00systemd-bootchart[0m  [38;5;27m90kernel-modules[0m      [38;5;27m95terminfo[0m
+[38;5;27m01test[0m               [38;5;27m90livenet[0m             [38;5;27m95udev-rules[0m
+[38;5;27m03modsign[0m            [38;5;27m90lvm[0m                 [38;5;27m95virtfs[0m
+[38;5;27m03rescue[0m             [38;5;27m90mdraid[0m              [38;5;27m95zfcp[0m
+[38;5;27m04watchdog[0m           [38;5;27m90multipath[0m           [38;5;27m95znet[0m
+[38;5;27m05busybox[0m            [38;5;27m90qemu[0m                [38;5;27m97biosdevname[0m
+[38;5;27m05nss-softokn[0m        [38;5;27m90qemu-net[0m            [38;5;27m98ecryptfs[0m
+[38;5;27m10i18n[0m               [38;5;27m91crypt-gpg[0m           [38;5;27m98pollcdrom[0m
+[38;5;27m30convertfs[0m          [38;5;27m91crypt-loop[0m          [38;5;27m98selinux[0m
+[38;5;27m40network[0m            [38;5;27m95cifs[0m                [38;5;27m98syslog[0m
+[38;5;27m45ifcfg[0m              [38;5;27m95dasd[0m                [38;5;27m98systemd[0m
+[38;5;27m45url-lib[0m            [38;5;27m95dasd_mod[0m            [38;5;27m98usrmount[0m
+[38;5;27m50drm[0m                [38;5;27m95debug[0m               [38;5;27m99base[0m
+[38;5;27m50plymouth[0m           [38;5;27m95fcoe[0m                [38;5;27m99fs-lib[0m
+[38;5;27m80cms[0m                [38;5;27m95fcoe-uefi[0m           [38;5;27m99img-lib[0m
+[38;5;27m90bcache[0m             [38;5;27m95fstab-sys[0m           [38;5;27m99kdumpbase[0m
+[38;5;27m90btrfs[0m              [38;5;27m95iscsi[0m               [38;5;27m99microcode_ctl-fw_dir_override[0m
+[38;5;27m90crypt[0m              [38;5;27m95nbd[0m                 [38;5;27m99shutdown[0m
+[38;5;27m90dm[0m                 [38;5;27m95nfs[0m                 [38;5;27m99uefi-lib[0m
+[38;5;27m90dmraid[0m             [38;5;27m95resume[0m
+[38;5;27m90dmsquash-live[0m      [38;5;27m95rootfs-block[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ls -la
+total 16
+drwxr-xr-x. 66 root root 4096 мар 22 20:37 [0m[38;5;27m.[0m
+drwxr-xr-x.  4 root root  236 мар 22 19:53 [38;5;27m..[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m00bash[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m00systemd-bootchart[0m
+drwxr-xr-x.  2 root root   44 мар 22 20:41 [38;5;27m01test[0m
+drwxr-xr-x.  2 root root   57 мар 22 19:53 [38;5;27m03modsign[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m03rescue[0m
+drwxr-xr-x.  2 root root   72 мар 22 19:53 [38;5;27m04watchdog[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m05busybox[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:52 [38;5;27m05nss-softokn[0m
+drwxr-xr-x.  2 root root  111 мар 22 19:53 [38;5;27m10i18n[0m
+drwxr-xr-x.  2 root root   72 мар 22 19:53 [38;5;27m30convertfs[0m
+drwxr-xr-x.  2 root root 4096 мар 22 19:53 [38;5;27m40network[0m
+drwxr-xr-x.  2 root root   51 мар 22 19:53 [38;5;27m45ifcfg[0m
+drwxr-xr-x.  2 root root   47 мар 22 19:53 [38;5;27m45url-lib[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m50drm[0m
+drwxr-xr-x.  2 root root  150 мар 22 19:53 [38;5;27m50plymouth[0m
+drwxr-xr-x.  2 root root   92 мар 22 19:53 [38;5;27m80cms[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m90bcache[0m
+drwxr-xr-x.  2 root root  129 мар 22 19:53 [38;5;27m90btrfs[0m
+drwxr-xr-x.  2 root root  195 мар 22 19:53 [38;5;27m90crypt[0m
+drwxr-xr-x.  2 root root  130 мар 22 19:53 [38;5;27m90dm[0m
+drwxr-xr-x.  2 root root   93 мар 22 19:53 [38;5;27m90dmraid[0m
+drwxr-xr-x.  2 root root  258 мар 22 19:53 [38;5;27m90dmsquash-live[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m90dmsquash-live-ntfs[0m
+drwxr-xr-x.  2 root root   73 мар 22 19:53 [38;5;27m90kernel-modules[0m
+drwxr-xr-x.  2 root root  102 мар 22 19:53 [38;5;27m90livenet[0m
+drwxr-xr-x.  2 root root   88 мар 22 19:53 [38;5;27m90lvm[0m
+drwxr-xr-x.  2 root root 4096 мар 22 19:53 [38;5;27m90mdraid[0m
+drwxr-xr-x.  2 root root  110 мар 22 19:53 [38;5;27m90multipath[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m90qemu[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m90qemu-net[0m
+drwxr-xr-x.  2 root root   53 мар 22 19:53 [38;5;27m91crypt-gpg[0m
+drwxr-xr-x.  2 root root   54 мар 22 19:53 [38;5;27m91crypt-loop[0m
+drwxr-xr-x.  2 root root   92 мар 22 19:53 [38;5;27m95cifs[0m
+drwxr-xr-x.  2 root root   50 мар 22 19:53 [38;5;27m95dasd[0m
+drwxr-xr-x.  2 root root   54 мар 22 19:53 [38;5;27m95dasd_mod[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m95debug[0m
+drwxr-xr-x.  2 root root  151 мар 22 19:53 [38;5;27m95fcoe[0m
+drwxr-xr-x.  2 root root   54 мар 22 19:53 [38;5;27m95fcoe-uefi[0m
+drwxr-xr-x.  2 root root   49 мар 22 19:53 [38;5;27m95fstab-sys[0m
+drwxr-xr-x.  2 root root  119 мар 22 19:53 [38;5;27m95iscsi[0m
+drwxr-xr-x.  2 root root   71 мар 22 19:53 [38;5;27m95nbd[0m
+drwxr-xr-x.  2 root root  139 мар 22 19:53 [38;5;27m95nfs[0m
+drwxr-xr-x.  2 root root   69 мар 22 19:53 [38;5;27m95resume[0m
+drwxr-xr-x.  2 root root  120 мар 22 19:53 [38;5;27m95rootfs-block[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m95ssh-client[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:53 [38;5;27m95terminfo[0m
+drwxr-xr-x.  2 root root  122 мар 22 19:53 [38;5;27m95udev-rules[0m
+drwxr-xr-x.  2 root root  102 мар 22 19:53 [38;5;27m95virtfs[0m
+drwxr-xr-x.  2 root root   50 мар 22 19:53 [38;5;27m95zfcp[0m
+drwxr-xr-x.  2 root root   49 мар 22 19:53 [38;5;27m95znet[0m
+drwxr-xr-x.  2 root root   57 мар 22 19:53 [38;5;27m97biosdevname[0m
+drwxr-xr-x.  2 root root   68 мар 22 19:53 [38;5;27m98ecryptfs[0m
+drwxr-xr-x.  2 root root   49 мар 22 19:53 [38;5;27m98pollcdrom[0m
+drwxr-xr-x.  2 root root   58 мар 22 19:53 [38;5;27m98selinux[0m
+drwxr-xr-x.  2 root root  191 мар 22 19:53 [38;5;27m98syslog[0m
+drwxr-xr-x.  2 root root 4096 мар 22 19:53 [38;5;27m98systemd[0m
+drwxr-xr-x.  2 root root   49 мар 22 19:53 [38;5;27m98usrmount[0m
+drwxr-xr-x.  2 root root  173 мар 22 19:53 [38;5;27m99base[0m
+drwxr-xr-x.  2 root root   46 мар 22 19:53 [38;5;27m99fs-lib[0m
+drwxr-xr-x.  2 root root   47 мар 22 19:53 [38;5;27m99img-lib[0m
+drwxr-xr-x.  2 root root  227 мар 22 19:54 [38;5;27m99kdumpbase[0m
+drwxr-xr-x.  2 root root   29 мар 22 19:54 [38;5;27m99microcode_ctl-fw_dir_override[0m
+drwxr-xr-x.  2 root root   48 мар 22 19:53 [38;5;27m99shutdown[0m
+drwxr-xr-x.  2 root root   48 мар 22 19:53 [38;5;27m99uefi-lib[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# dracut -g[Kf -v
+Executing: /usr/sbin/dracut -f -v
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and "intel-ucode/06-8e-09" matches "intel-ucode/*"
+      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.12.2.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-957.12.2.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** Constructing GenuineIntel.bin ****
+*** Store current command l
