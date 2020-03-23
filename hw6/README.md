@@ -109,6 +109,12 @@ sh-4.2# touch /.autorelabel
 ```console
 [root@localhost ~]# dracut -f -v
 ```
+* Проверяю наличие модуля в загруженных
+```console
+[root@localhos ~]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+test
+```
+* Проверяю загруженный модуль в работе. Для этого перезагружаюсь и в меню изменения параметров загрузки убираю аргументы rhgb и quiet и выводе вижу пингвина. 
 
 
 
