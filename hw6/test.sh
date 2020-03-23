@@ -12,7 +12,7 @@ Hello! You are in dracut module!
        |o_o |
        |:_/ |
       //   \ \
-     (|     | )
+     (|otus | )
     /'\_   _/`\
     \___)=(___/
 msgend
