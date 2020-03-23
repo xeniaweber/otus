@@ -66,7 +66,7 @@ sh-4.2# touch /.autorelabel
 * Загружаюсь в систему с оболочкой /bin/bash и смонтированной в режим read-write
 
 #### Переименовать VG
-* Для записи действий запускаю утилиту script, которая записала в итоге следующий файл - [typescript]()
+* Для записи действий запускаю утилиту script, которая записала в итоге следующий файл - [typescript](https://github.com/xeniaweber/otus/blob/master/hw6/typescript)
 * Смотрю текущее состояние системы:
 ```console
 [root@localhost ~]# vgs
