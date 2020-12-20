@@ -17,4 +17,4 @@ docker push xweber/otus:hw18
 [xweber/otus:hw18](https://hub.docker.com/layers/xweber/otus/hw18/images/sha256-0b1f218e412e482881a0126dee21e5b3b09747e3131e16c290f94a343be55702?context=explore)
 
 #### Итог
-Запустив данный образ и введя в строку браузера http://localhost:80 можно увидеть сообщение "Hello, Otus!"
+Запустив данный образ и введя в строку браузера http://localhost:80 , можно увидеть сообщение "Hello, Otus!"
